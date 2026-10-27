@@ -1,0 +1,14 @@
+# Google Cloud service-account keys and other credentials: never commit them.
+*.json
+.env
+.env.*
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+.venv/
+.DS_Store

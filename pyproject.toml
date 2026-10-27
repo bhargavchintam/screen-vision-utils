@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "screen-vision-utils"
+version = "0.1.0"
+description = "Find an image or a word on a screenshot: OpenCV template matching and Google Cloud Vision text boxes"
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{ name = "Bindu Bhargava Reddy Chintam" }]
+requires-python = ">=3.10"
+dependencies = [
+    "numpy>=1.21",
+    "opencv-python-headless>=4.8",
+]
+
+[project.optional-dependencies]
+# Only needed for `python -m screen_vision text`.
+text = ["google-cloud-vision>=3"]
+dev = ["pytest>=7"]
+
+[project.scripts]
+screen-vision = "screen_vision.cli:main"
+
+[project.urls]
+Repository = "https://github.com/bhargavchintam/screen-vision-utils"
+
+[tool.setuptools]
+packages = ["screen_vision"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+# Lets the tests import screen_vision from a plain clone, without installing it.
+pythonpath = ["."]
