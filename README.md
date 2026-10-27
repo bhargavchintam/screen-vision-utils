@@ -91,10 +91,10 @@ The tests draw their own images with numpy and OpenCV, so they need no files, no
 
 ## Where this came from
 
-This package joins two small scripts I wrote in 2022:
+This package joins two small scripts I wrote in 2022. Their old repos are now private:
 
-- [detect-text-coordinates-in-image](https://github.com/bhargavchintam/detect-text-coordinates-in-image): text coordinates from an image with the Google Cloud Vision API. It became `screen_vision.text`.
-- [detect-image-coordinates-from-window-screenshot](https://github.com/bhargavchintam/detect-image-coordinates-from-window-screenshot): an image's coordinates on a window screenshot with OpenCV template matching. It became `screen_vision.locate`.
+- `detect-text-coordinates-in-image`: text coordinates from an image with the Google Cloud Vision API. It became `screen_vision.text`.
+- `detect-image-coordinates-from-window-screenshot`: an image's coordinates on a window screenshot with OpenCV template matching. It became `screen_vision.locate`.
 
 Compared with those scripts, this package adds one command line for both, results as small data classes instead of prints, a minimum score, a picture with the found box, clear errors for missing files and credentials, and tests.
 
